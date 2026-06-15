@@ -7,6 +7,8 @@ const typingText = document.getElementById("typingText");
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
 const backToTop = document.getElementById("backToTop");
+const skillTabs = document.querySelectorAll("[data-skill-tab]");
+const skillPanels = document.querySelectorAll("[data-skill-panel]");
 
 const typingPhrases = [
   "Student | Web Developer | AI & ML Enthusiast",
@@ -172,6 +174,29 @@ const statsObserver = new IntersectionObserver(
 
 document.querySelectorAll(".mini-stats").forEach((stats) => {
   statsObserver.observe(stats);
+});
+
+skillTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const selectedTab = tab.dataset.skillTab;
+
+    skillTabs.forEach((item) => {
+      const isActive = item === tab;
+      item.classList.toggle("active", isActive);
+      item.setAttribute("aria-selected", String(isActive));
+    });
+
+    skillPanels.forEach((panel) => {
+      const isActive = panel.dataset.skillPanel === selectedTab;
+      panel.classList.toggle("active", isActive);
+
+      if (isActive) {
+        panel.querySelectorAll(".reveal").forEach((card) => {
+          card.classList.add("visible");
+        });
+      }
+    });
+  });
 });
 
 contactForm?.addEventListener("submit", (event) => {

@@ -222,49 +222,96 @@
       </section>
 
       <section class="section skills" id="skills">
-        <div class="section-heading reveal">
-          <p class="eyebrow">Skills</p>
-          <h2>Technical and professional skills I am growing every day.</h2>
+        <div class="skills-heading reveal">
+          <h2>My Skills</h2>
+          <span></span>
         </div>
 
-        <div class="skill-grid">
+        <div class="skill-tabs reveal" role="tablist" aria-label="Skill categories">
+          <button class="skill-tab active" type="button" data-skill-tab="technical" role="tab" aria-selected="true">
+            Technical Skills
+          </button>
+          <button class="skill-tab" type="button" data-skill-tab="professional" role="tab" aria-selected="false">
+            Professional Skills
+          </button>
+        </div>
+
+        <div class="skill-panel active" data-skill-panel="technical">
           <article class="skill-card reveal">
-            <i class="fa-solid fa-code"></i>
-            <h3>Programming Languages</h3>
-            <div class="skill-meter"><span style="width: 72%"></span><em>C</em></div>
-            <div class="skill-meter"><span style="width: 68%"></span><em>Python</em></div>
-            <div class="skill-meter"><span style="width: 45%"></span><em>HTML Beginner</em></div>
-            <div class="skill-meter"><span style="width: 42%"></span><em>CSS Beginner</em></div>
+            <div class="skill-icon"><i class="fa-solid fa-terminal"></i></div>
+            <h3>C Programming</h3>
+            <p>
+              Basic programming structure, variables, conditionals, arrays, functions, and file
+              handling in C.
+            </p>
+            <span class="skill-tag">Language</span>
           </article>
+
           <article class="skill-card reveal">
-            <i class="fa-solid fa-window-restore"></i>
-            <h3>Web Development</h3>
-            <div class="badge-row">
-              <span>Responsive Design</span>
-              <span>Frontend Development</span>
-              <span>Backend Basics</span>
-              <span>API Integration Learning</span>
-            </div>
+            <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>HTML & CSS</h3>
+            <p>
+              Structuring accessible layouts with semantic HTML5 and styling with responsive CSS3
+              and animations.
+            </p>
+            <span class="skill-tag">Frontend</span>
           </article>
+
           <article class="skill-card reveal">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-            <h3>Tools & Platforms</h3>
-            <div class="badge-row">
-              <span>GitHub</span>
-              <span>VS Code</span>
-              <span>ChatGPT</span>
-              <span>AI Tools</span>
-            </div>
+            <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+            <h3>Python</h3>
+            <p>
+              Basic scripts, automation, data syntax, loops, dictionaries, and simple library usage.
+            </p>
+            <span class="skill-tag">Language</span>
           </article>
+
           <article class="skill-card reveal">
-            <i class="fa-solid fa-users"></i>
-            <h3>Soft Skills</h3>
-            <div class="badge-row">
-              <span>Communication</span>
-              <span>Teamwork</span>
-              <span>Time Management</span>
-              <span>Technical Curiosity</span>
-            </div>
+            <div class="skill-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Basic Data Structures</h3>
+            <p>
+              Fundamental concepts including arrays, lists, basic sorting, stacks, and queues to
+              improve algorithmic thinking.
+            </p>
+            <span class="skill-tag">Fundamentals</span>
+          </article>
+        </div>
+
+        <div class="skill-panel" data-skill-panel="professional">
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-comments"></i></div>
+            <h3>Communication</h3>
+            <p>
+              Comfortable explaining ideas, sharing progress, and presenting project work clearly.
+            </p>
+            <span class="skill-tag">Soft Skill</span>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-people-group"></i></div>
+            <h3>Teamwork</h3>
+            <p>
+              Able to collaborate with classmates, divide responsibilities, and support group goals.
+            </p>
+            <span class="skill-tag">Collaboration</span>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-clock"></i></div>
+            <h3>Time Management</h3>
+            <p>
+              Focused on planning tasks, meeting deadlines, and balancing academic project work.
+            </p>
+            <span class="skill-tag">Productivity</span>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Technical Curiosity</h3>
+            <p>
+              Interested in learning new tools, debugging patiently, and improving through practice.
+            </p>
+            <span class="skill-tag">Growth</span>
           </article>
         </div>
       </section>
