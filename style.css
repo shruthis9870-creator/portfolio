@@ -922,6 +922,10 @@ body.light-mode .skill-card {
   padding-left: 46px;
 }
 
+.timeline-item + .timeline-item {
+  margin-top: 28px;
+}
+
 .timeline-dot {
   position: absolute;
   top: 16px;
@@ -975,6 +979,44 @@ body.light-mode .skill-card {
 
 .simple-card p {
   margin-top: 10px;
+}
+
+.achievement-details {
+  margin-top: 18px;
+}
+
+.achievement-details summary {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border: 1px solid rgba(34, 211, 238, 0.24);
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.08);
+  color: var(--cyan);
+  cursor: pointer;
+  font-weight: 800;
+  padding: 9px 14px;
+}
+
+.achievement-details summary::marker {
+  color: var(--cyan);
+}
+
+.achievement-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.achievement-tags span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 9px 12px;
 }
 
 .contact-layout {
