@@ -612,6 +612,7 @@ h4 {
 
 .fact-card h3,
 .simple-card h3,
+.simple-card h4,
 .skill-card h3,
 .project-card h3 {
   margin-top: 18px;
@@ -981,6 +982,35 @@ body.light-mode .skill-card {
   margin-top: 10px;
 }
 
+.achievement-groups {
+  display: grid;
+  gap: 28px;
+}
+
+.achievement-group {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(34, 211, 238, 0.08), transparent 38%),
+    var(--surface);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.achievement-group > h3 {
+  margin-bottom: 18px;
+  color: var(--cyan);
+  font-size: 1.18rem;
+}
+
+.achievement-card h4 {
+  color: var(--heading);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
 .achievement-details {
   margin-top: 18px;
 }
@@ -1017,6 +1047,64 @@ body.light-mode .skill-card {
   font-size: 0.86rem;
   font-weight: 700;
   padding: 9px 12px;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.tool-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.18), transparent 38%),
+    var(--surface);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tool-card::after {
+  content: "";
+  position: absolute;
+  right: -34px;
+  bottom: -34px;
+  width: 88px;
+  height: 88px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.tool-card:hover {
+  border-color: rgba(34, 211, 238, 0.38);
+  transform: translateY(-5px) rotate(-1deg);
+}
+
+.tool-card i {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(255, 47, 125, 0.18), rgba(34, 211, 238, 0.16));
+  color: var(--cyan);
+  font-size: 1.35rem;
+}
+
+.tool-card h3 {
+  margin-top: 18px;
+  color: var(--heading);
+  font-size: 1.1rem;
+}
+
+.tool-card p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .contact-layout {
@@ -1192,6 +1280,10 @@ body.light-mode .skill-card {
   .service-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .tool-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 860px) {
@@ -1259,7 +1351,8 @@ body.light-mode .skill-card {
   }
 
   .card-grid,
-  .service-grid {
+  .service-grid,
+  .tool-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -1308,7 +1401,8 @@ body.light-mode .skill-card {
   .info-columns,
   .facts-grid,
   .card-grid,
-  .service-grid {
+  .service-grid,
+  .tool-grid {
     grid-template-columns: 1fr;
   }
 
