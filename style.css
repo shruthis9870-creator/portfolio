@@ -1098,9 +1098,11 @@ body.light-mode .skill-card {
   margin: 0 auto;
   padding: 30px 0 42px;
   align-items: center;
+  gap: 16px;
   justify-content: space-between;
   color: var(--muted);
   border-top: 1px solid var(--line);
+  flex-wrap: wrap;
 }
 
 .footer a {
